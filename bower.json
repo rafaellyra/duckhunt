@@ -1,0 +1,20 @@
+{
+  "name": "duckhunt",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rafaellyra/duckhunt",
+  "authors": [
+    "Rafael Lyra <rafael@rafaellyra.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}
