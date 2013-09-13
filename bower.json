@@ -15,6 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.0.3"
+    "jquery": "~2.0.3",
+    "requirejs": "~2.1.8",
+    "handlebars": "~1.0.0",
+    "requirejs-text": "~2.0.10",
+    "requirejs-handlebars": "git://github.com/jfparadis/requirejs-handlebars.git"
   }
 }
