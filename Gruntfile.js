@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                     sassDir: 'assets/styles/sass',
                     cssDir: 'assets/styles/css',
                     imagesDir: 'assets/images/compass',
-                    outputStyle: 'compact',
+                    outputStyle: 'compressed',
                     relativeAssets: true
                 }
             }
@@ -45,4 +45,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('server', ['connect:server']);
+    grunt.registerTask('buildCSS', ['compass:dist', 'csslint']);
 };
