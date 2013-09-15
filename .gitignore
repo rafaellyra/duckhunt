@@ -1,3 +1,4 @@
 *.log
 /vendors/components/
 node_modules
+.sass-cache/
