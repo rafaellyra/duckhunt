@@ -2,3 +2,4 @@
 /vendors/components/
 node_modules
 .sass-cache/
+assets/styles/css/*.css
