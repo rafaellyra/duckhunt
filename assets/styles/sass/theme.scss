@@ -7,7 +7,7 @@ section{
 }
 .canvas{
     margin: 0 auto;
-    padding: em(50) 0;
+    padding: em(50) 0 0;
     width: em(800);
 }
 a {
@@ -20,9 +20,9 @@ a {
 .game-title {
     color: $lightblue;
     font-family: 'Duckhunt';
-    font-size: 10em;
-    text-align: center;
+    font-size: em(100);
 }
 .main-nav{
-    width: 0.5em; /* 800px */
+    margin: 0 auto;
+    width: em(400); /* 800px */
 }

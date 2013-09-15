@@ -2,11 +2,15 @@
 @include font-face("Manaspace", font-files("manaspace/manaspc.eot", "manaspace/manaspc.svg", "manaspace/manaspc.ttf", "manaspace/manaspc.woff"));
 $basefont: 10;
 
+$white: #fff;
 $lightblue: #5bc2e4;
 $orange: #d4a244;
 $black: #000;
+$green: #7fbd56;
 
 body {
+    color: $white;
     font-family: Manaspace;
     font-size: 62.5%;
 }
+.success-text{ color: $green; }
