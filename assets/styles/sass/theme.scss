@@ -1,0 +1,28 @@
+html,body{
+    height: 100%;
+}
+section{
+    height: 100%;
+    width: 100%;
+}
+.canvas{
+    margin: 0 auto;
+    padding: em(50) 0;
+    width: em(800);
+}
+a {
+    color: $orange;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.game-title {
+    color: $lightblue;
+    font-family: 'Duckhunt';
+    font-size: 10em;
+    text-align: center;
+}
+.main-nav{
+    width: 0.5em; /* 800px */
+}
