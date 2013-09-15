@@ -1,0 +1,9 @@
+{
+    "universal-selector" : false,
+    "star-property-hack" : false,
+    "duplicate-properties" : false,
+    "display-property-grouping": false,
+    "compatible-vendor-prefixes": false,
+    "adjoining-classes": false,
+    "box-model": false
+}
