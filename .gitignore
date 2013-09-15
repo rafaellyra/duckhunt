@@ -2,4 +2,6 @@
 /vendors/components/
 node_modules
 .sass-cache/
+assets/styles/css/
 assets/styles/css/*.css
+.DS_Store
