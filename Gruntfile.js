@@ -1,4 +1,3 @@
-/*jshint scripturl:true*/
 module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
@@ -9,6 +8,7 @@ module.exports = function (grunt) {
                     sassDir: 'assets/styles/sass',
                     cssDir: 'assets/styles/css',
                     imagesDir: 'assets/images/compass',
+                    fontsDir: 'assets/fonts/',
                     outputStyle: 'compressed',
                     relativeAssets: true
                 }
@@ -17,9 +17,6 @@ module.exports = function (grunt) {
         csslint: {
             options: {
                 csslintrc: '.csslintrc'
-            },
-            strict: {
-                src: ['assets/styles/css/**/*.css']
             }
         },
         jshint: {
@@ -35,6 +32,15 @@ module.exports = function (grunt) {
                     keepalive: true
                 }
             }
+        },
+        watch: {
+            styles: {
+                files: ['assets/styles/sass/**/*'],
+                tasks: ['buildCSS', 'csslint'],
+                options: {
+                    livereload: true
+                }
+            }
         }
     });
 
@@ -45,5 +51,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('server', ['connect:server']);
+    grunt.registerTask('dev', ['csswatch']);
+
+    grunt.registerTask('csswatch', ['watch:styles']);
     grunt.registerTask('buildCSS', ['compass:dist', 'csslint']);
 };
