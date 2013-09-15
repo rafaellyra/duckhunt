@@ -1,0 +1,12 @@
+@include font-face("Duckhunt", font-files("duckhunt/duckhunt.eot", "duckhunt/duckhunt.svg", "duckhunt/duckhunt.ttf", "duckhunt/duckhunt.woff"));
+@include font-face("Manaspace", font-files("manaspace/manaspc.eot", "manaspace/manaspc.svg", "manaspace/manaspc.ttf", "manaspace/manaspc.woff"));
+$basefont: 10;
+
+$lightblue: #5bc2e4;
+$orange: #d4a244;
+$black: #000;
+
+body {
+    font-family: Manaspace;
+    font-size: 62.5%;
+}
