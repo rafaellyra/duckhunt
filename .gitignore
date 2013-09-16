@@ -3,6 +3,7 @@
 /dist/
 /assets/styles/css/
 /assets/styles/css/*.css
+/assets/images/sprites/
 /vendors/components/
 /node_modules/
 /.sass-cache/
