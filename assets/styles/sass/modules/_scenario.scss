@@ -1,0 +1,28 @@
+@import "scenario/*.png";
+
+.scenario{
+    background-color: $bluesky;
+    margin: 0 auto;
+    position: relative;
+    width: em(900);
+}
+.scenario:before{
+    @include scenario-sprite(ground);
+    bottom: 0;
+    content: '';
+    height: scenario-sprite-height(ground);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.scenario:after{
+    @include scenario-sprite(tree);
+    bottom: em(100);
+    content: '';
+    height: scenario-sprite-height(tree);
+    left: em(140);
+    position: absolute;
+    width: scenario-sprite-width(tree);
+    z-index: 90;
+}
