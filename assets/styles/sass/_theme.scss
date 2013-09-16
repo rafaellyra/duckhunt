@@ -1,4 +1,5 @@
 html,body{
+    background-color: $black;
     height: 100%;
 }
 section{
@@ -24,5 +25,5 @@ a {
 }
 .main-nav{
     margin: 0 auto;
-    width: em(400); /* 800px */
+    width: em(400);
 }
