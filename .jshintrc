@@ -1,7 +1,9 @@
 {
     "globals": {
-        "define": false,
-        "require": false,
+        "define": true,
+        "require": true,
+        "requirejs": true,
+        "Handlebars": true,
         "describe": false,
         "it": false,
         "sinon": false,
