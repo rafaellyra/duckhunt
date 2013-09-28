@@ -62,6 +62,16 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    name: 'assets/scripts/main',
+                    baseUrl: './',
+                    mainConfigFile: 'assets/scripts/require.config.js',
+                    out: 'assets/scripts/main.optimized.js'
+                }
+            }
         }
     });
 
@@ -71,6 +81,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
+
 
     grunt.registerTask('server', ['connect:server']);
     grunt.registerTask('dev', ['csswatch']);
