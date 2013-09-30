@@ -76,6 +76,14 @@ module.exports = function (grunt) {
                     out: 'assets/scripts/main.optimized.js'
                 }
             }
+        },
+        mocha: {
+            src: ['spec/SpecRunner.html'],
+            options: {
+                bail: true,
+                log: true,
+                reporter: 'Nyan'
+            }
         }
     });
 
