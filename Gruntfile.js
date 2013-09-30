@@ -20,7 +20,8 @@ module.exports = function (grunt) {
         },
         clean: {
             'no-write': true,
-            compass: ['assets/styles/css/', 'assets/images/sprites/']
+            compass: ['assets/styles/css/', 'assets/images/sprites/'],
+            js: ['assets/scripts/main.optimized.js']
         },
         uglify: {
             dev: {
@@ -80,8 +81,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('server', ['connect:server']);
 
+    grunt.registerTask('uglifyJS', ['uglify', 'clean:js']);
+
     grunt.registerTask('buildCSS', ['clean:compass', 'compass:dev', 'csslint']);
-    grunt.registerTask('buildJS', ['jshint', 'requirejs', 'uglify']);
+    grunt.registerTask('buildJS', ['jshint', 'requirejs', 'uglifyJS']);
 
     grunt.registerTask('build', ['buildCSS', 'buildJS']);
 
