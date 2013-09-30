@@ -1,12 +1,12 @@
 @import "scenario/*.png";
 
-.scenario{
+.game-scene{
     background-color: $bluesky;
     margin: 0 auto;
     position: relative;
     width: em(900);
 }
-.scenario:before{
+.game-scene:before{
     @include scenario-sprite(ground);
     bottom: 0;
     content: '';
@@ -16,7 +16,7 @@
     width: 100%;
     z-index: 100;
 }
-.scenario:after{
+.game-scene:after{
     @include scenario-sprite(tree);
     bottom: em(100);
     content: '';
