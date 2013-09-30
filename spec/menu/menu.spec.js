@@ -1,8 +1,9 @@
 define([
+    'jquery',
     'modules/renderer',
     'modules/menu',
     'hbars!templates/menu'
-], function (renderer, menu, menuTemplate) {
+], function ($, renderer, menu, menuTemplate) {
     'use strict';
     var itemMenuSelector = '.main-nav .item';
     describe('Duck Hunt Menu', function () {
@@ -18,7 +19,7 @@ define([
             expect(nav.length).to.equal(1);
         });
         it('should render the game scene when choose a game mode', function () {
-            document.querySelector(itemMenuSelector).click();
+            $(itemMenuSelector).click();
             expect($('.game-scene').length).to.equal(1);
         });
     });
