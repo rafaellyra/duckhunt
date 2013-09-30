@@ -43,21 +43,27 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    port: 9001,
+                    port: 9000,
                     hostname: 'localhost',
-                    open: true,
-                    livereload: true
+                    open: true
                 }
             }
         },
         watch: {
-            styles: {
-                files: ['assets/styles/sass/**/*'],
-                tasks: ['buildCSS']
+            options: {
+                livereload: true
             },
-            javascript: {
+            compass: {
+                files: ['assets/styles/sass/**/*'],
+                tasks: ['compass:dev']
+            },
+            scripts: {
                 files: ['assets/styles/scripts/main.js', 'assets/styles/scripts/modules/*.js'],
-                tasks: ['buildJS']
+                tasks: ['requirejs', 'uglify']
+            },
+            handlebars: {
+                files: ['assets/templates/*.html'],
+                tasks: ['requirejs', 'uglify']
             }
         },
         requirejs: {
@@ -77,8 +83,9 @@ module.exports = function (grunt) {
     grunt.registerTask('buildCSS', ['clean:compass', 'compass:dev', 'csslint']);
     grunt.registerTask('buildJS', ['jshint', 'requirejs', 'uglify']);
 
-    grunt.registerTask('dev', ['connect', 'watch:styles', 'watch:javascript']);
-    grunt.registerTask('build', ['compass:dist', 'uglify:dist']);
+    grunt.registerTask('build', ['buildCSS', 'buildJS']);
+
+    grunt.registerTask('dev', ['build', 'connect', 'watch:compass', 'watch:scripts', 'watch:handlebars']);
 
 
 
