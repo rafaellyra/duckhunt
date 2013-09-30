@@ -4,6 +4,8 @@
 /assets/styles/css/
 /assets/styles/css/*.css
 /assets/images/sprites/
+/assets/scripts/main.optimized.js
+/assets/scripts/main.min.js
 /vendors/components/
 /node_modules/
 /.sass-cache/
