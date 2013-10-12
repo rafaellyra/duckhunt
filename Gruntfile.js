@@ -48,6 +48,15 @@ module.exports = function (grunt) {
                     hostname: 'localhost',
                     open: true
                 }
+            },
+            spec : {
+                options: {
+                    base: ['.', 'spec'],
+                    port: 9001,
+                    hostname: 'localhost',
+                    keepalive: true,
+                    open: 'http://localhost:<%= connect.spec.options.port %>/SpecRunner.html'
+                }
             }
         },
         watch: {
@@ -96,7 +105,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['buildCSS', 'buildJS']);
 
-    grunt.registerTask('dev', ['build', 'connect', 'watch:compass', 'watch:scripts', 'watch:handlebars']);
+    grunt.registerTask('dev', ['build', 'server', 'watch:compass', 'watch:scripts', 'watch:handlebars']);
 
 
 
