@@ -5,5 +5,5 @@ require([
 ], function (renderer, menu, menuTemplate) {
     'use strict';
     renderer('body', menuTemplate);
-    menu('body', '.main-nav .item');
+    menu('.main-nav .item', 'body');
 });

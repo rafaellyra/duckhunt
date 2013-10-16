@@ -20,15 +20,7 @@ module.exports = function (grunt) {
         },
         clean: {
             'no-write': true,
-            compass: ['assets/styles/css/', 'assets/images/sprites/'],
-            js: ['assets/scripts/main.optimized.js']
-        },
-        uglify: {
-            dev: {
-                files: {
-                    'assets/scripts/main.min.js': ['assets/scripts/main.optimized.js']
-                }
-            }
+            compass: ['assets/styles/css/', 'assets/images/sprites/']
         },
         csslint: {
             options: {
@@ -69,11 +61,11 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: ['assets/styles/scripts/main.js', 'assets/styles/scripts/modules/*.js'],
-                tasks: ['requirejs', 'uglify']
+                tasks: ['requirejs']
             },
             handlebars: {
                 files: ['assets/templates/*.html'],
-                tasks: ['requirejs', 'uglify']
+                tasks: ['requirejs']
             }
         },
         requirejs: {
@@ -101,11 +93,11 @@ module.exports = function (grunt) {
     grunt.registerTask('uglifyJS', ['uglify', 'clean:js']);
 
     grunt.registerTask('buildCSS', ['clean:compass', 'compass:dev', 'csslint']);
-    grunt.registerTask('buildJS', ['jshint', 'requirejs', 'uglifyJS']);
+    grunt.registerTask('buildJS', ['jshint', 'requirejs']);
 
     grunt.registerTask('build', ['buildCSS', 'buildJS']);
 
-    grunt.registerTask('dev', ['build', 'server', 'watch:compass', 'watch:scripts', 'watch:handlebars']);
+    grunt.registerTask('dev', ['build', 'server', 'watch']);
 
 
 
